@@ -1,3 +1,27 @@
-// -----------------------------------------------------------------------------
-// This file contains all styles related to the footer of the site/application.
-// -----------------------------------------------------------------------------
+
+@import "../abstracts/mixins";
+
+footer{
+    max-width: 100%;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    background-color: $background-color;
+    min-height: 20vh;
+
+    ul{   
+        @include position (space-evenly, 5%);
+        color: white;
+        list-style-type: none;
+
+    }
+
+    li{
+        @include position (none, 2vh);
+        font-size: 150%;   
+    }
+
+    img{
+        max-width: 3vh;
+}
+}
