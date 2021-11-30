@@ -31,12 +31,20 @@
     @content;
   }
 }
-///media queries
+///media queries max-width
 @mixin media ($width){
   @media (max-width: $width) {
       @content;
   }
  }
+
+ ///media queries min-width
+ @mixin mediaMin ($width){
+   @media (min-width: $width) {
+     @content;
+   }
+ } 
+
  /// mixin selection padding
  @mixin position ($position, $size) {
      padding: $size $size $size $size;
@@ -44,4 +52,16 @@
  
  }
      
- 
+ @mixin size ($sizevh, $sizeem, $sizerem) {
+  .price{ /*          Price paragraph             */
+    padding-left: $sizevh vh;
+
+    .prices h1 {
+        font-size: $sizeem em;
+    }
+
+    .prices p {
+        font-size: $sizerem rem;
+    }
+  }
+ }

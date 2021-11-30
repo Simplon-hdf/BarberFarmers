@@ -1,0 +1,78 @@
+/*          Prices List Design          */
+.prices {
+
+    ul{
+        margin-bottom: 3%;
+    }
+
+    p{
+        color: #fefee2;
+    }
+
+    li{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding-top: 10%;
+        padding-bottom: 3%;
+        list-style: none;
+        border-bottom: 1px dashed $priceColor;
+    }
+
+    .puce_list {
+        width: 30px;
+        height: 30px;
+        padding-right: 3%;
+    }
+
+    .divider{
+        margin-left: 10%;
+        font-weight: bold;
+        color: $priceColor;
+    }
+}
+
+
+/*          Prices List Design End         */
+@include mediaMin(480) {
+    .prices h1 {
+        font-size: 48px;
+    }
+    .prices p {
+        font-size: 1rem;
+    }
+    .price{ /*          Price paragraph             */
+        padding-left: 5vh;
+    }
+    .caption {
+        width: 15vh;
+    }
+
+}
+
+@include mediaMin (481) {
+     @include size (10, 5, 1.4);
+    
+    .caption {
+        width: 30vh;
+    }
+}
+
+
+@include mediaMin (769) {
+
+    @include size (20, 6 ,1.4);
+
+    .caption {
+        width: 30vh;
+    }
+}
+
+
+@include mediaMin (1280) {
+    @include size (20, 6, 1.4);
+
+    .caption {
+        width: 30vh;
+    }
+}
