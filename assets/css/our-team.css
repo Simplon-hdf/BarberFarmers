@@ -7,8 +7,6 @@
 .our-team {
   display: grid;
   gap: 25px 10px;
-  background-image: url(../img/wooden-background.jpg);
-  background-attachment: fixed;
 }
 
 .our-team h1 {
