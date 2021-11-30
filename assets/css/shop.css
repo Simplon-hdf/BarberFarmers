@@ -1,19 +1,11 @@
-/*@import "./utils/variables";
-@import "./layouts/form";*/
-
-
-/*# sourceMappingURL=main.css.map */
-body {
-  background-image: url("../img/wooden-background.jpg");
-  background-attachment: fixed;
-}
-
 .container {
+  /*     Main Section      */
   display: grid;
   gap: 25px 10px;
+  margin-top: 10%;
+  /*    Set Grid Area       */
 }
-
-h1 {
+.container h1 {
   grid-area: title;
   color: #D4AF37;
   text-align: center;
@@ -21,140 +13,107 @@ h1 {
   text-shadow: black 1.5px 1.5px 1.5px;
   font-family: "Rye";
 }
-
-article {
+.container article {
+  /*    Cards       */
   justify-self: center;
   border-radius: 15px;
-  background-color: rgba(184, 115, 51, 0.77);
+  background-color: rgba(184, 115, 51, 0.5);
   border: 4px solid #d4af37;
   display: grid;
   grid-template-rows: 1fr 0.15fr;
 }
-
-.card1 {
+.container .container .card1 {
   grid-area: card1;
 }
-
-.card2 {
+.container .container .card2 {
   grid-area: card2;
 }
-
-.card3 {
+.container .container .card3 {
   grid-area: card3;
 }
-
-.card4 {
+.container .container .card4 {
   grid-area: card4;
 }
-
-.card5 {
+.container .container .card5 {
   grid-area: card5;
 }
-
-.card6 {
+.container .container .card6 {
   grid-area: card6;
 }
-
-.card7 {
+.container .container .card7 {
   grid-area: card7;
 }
-
-.card8 {
+.container .container .card8 {
   grid-area: card8;
 }
-
-article > figure {
+.container article > figure {
   width: 80%;
   margin: auto;
-
 }
-
-article > figure > img {
+.container article > figure > img {
   width: 100%;
 }
-
-.foto {
+.container .foto {
   padding-top: 1rem;
   padding-bottom: 1rem;
 }
-
-article > p, article > a {
+.container article > p, .container article > a {
   text-align: center;
   padding: 1rem;
+  font-size: 1.3rem;
+  text-align: justify;
+  color: #222222;
 }
 
+/*          For smallest screens            */
 @media screen and (max-width: 480px) {
   .container {
     grid-template-columns: 1fr;
     grid-template-rows: 0.5fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 0.15fr;
-    grid-template-areas:
-        "title"
-        "card1"
-        "card2"
-        "card3"
-        "card4"
-        "card5"
-        "card6"
-        "card7"
-        "card8";
+    grid-template-areas: "title" "card1" "card2" "card3" "card4" "card5" "card6" "card7" "card8";
   }
 
   article {
     width: 200px;
   }
-
 }
-
-@media screen and (min-width: 481px) {
+/*          For tablets and large smartphones screens          */
+/*          Media queries for tablets and large smartphones         */
+@media (min-width: 481px) {
   .container {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 0.5fr 1fr 1fr 1fr 1fr 0.15fr;
-    grid-template-areas:
-        "title title"
-        "card1 card2"
-        "card3 card4"
-        "card5 card6"
-        "card7 card8";
+    grid-template-areas: "title title" "card1 card2" "card3 card4" "card5 card6" "card7 card8";
   }
 
   article {
     width: 250px;
   }
-
 }
-
-@media screen and (min-width: 769px) {
+/*          For tablets         */
+/*          Media queries for tablets and large smartphones         */
+@media (min-width: 769px) {
   .container {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 0.5fr 1fr 1fr 1fr 1fr 0.15fr;
-    grid-template-areas:
-        "title title"
-        "card1 card2"
-        "card3 card4"
-        "card5 card6"
-        "card7 card8";
+    grid-template-areas: "title title" "card1 card2" "card3 card4" "card5 card6" "card7 card8";
   }
 
   article {
     width: 300px;
   }
-
-
 }
-
+/*          For larger screens             */
 @media screen and (min-width: 1280px) {
   .container {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 0.5fr 1fr 1fr 1fr 0.15fr;
-    grid-template-areas:
-        ". title ."
-        "card1 card2 card3"
-        "card4 card5 card6"
-        "card7 card8 .";
+    grid-template-areas: ". title ." "card1 card2 card3" "card4 card5 card6" "card7 card8 .";
   }
 
   article {
     width: 400px;
   }
-
 }
+
+/*# sourceMappingURL=shop.css.map */

@@ -4,57 +4,203 @@
 <head>
   <meta charset="utf-8">
   <title></title>
-  <meta content="" name="description">
-  <meta content="width=device-width, initial-scale=1" name="viewport">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <meta content="" property="og:title">
-  <meta content="" property="og:type">
-  <meta content="" property="og:url">
-  <meta content="" property="og:image">
+  <meta property="og:title" content="">
+  <meta property="og:type" content="">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
 
-  <link href="assets/manifest.json" rel="manifest">
-  <link href="assets/img/icon.png" rel="apple-touch-icon">
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="apple-touch-icon" href="icon.png">
   <!-- Place favicon.ico in the root directory -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=NTR&display=swap" rel="stylesheet"> 
 
-  <link href="assets/css/normalize.css" rel="stylesheet">
-  <link href="assets/css/main.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Rye&display=swap" rel="stylesheet">
 
-  <meta content="#fafafa" name="theme-color">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="./css/main.css">
+  <link rel="stylesheet" href="./css/partials.css">
+  <link rel="stylesheet" href="./assets/css/contact.css">
+
+  <meta name="theme-color" content="#fafafa">
 </head>
 
 <body>
+  <header>
+    <section class="header_1">
+    <ul class="left">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="cervice.html">Srevice</a></li>
+      <li><a href="NosEquipes.html">Notre équipe</a></li>
+      <li><a href="Gallerie.html">Gallerie</a></li>
+    </ul>
+    <figure>
+      <img class="Logo" src="./img/icons/red-beard.png" alt="Logo_Barbe">
+    </figure>
+    <ul class="rigth">
+      <li><a href="Shop.html">Shop</a></li>
+      <li><a href="Blog.html">Blog</a></li>
+      <li><a href="Reservation.html">Reservation</a></li>
+      <li><a href="Contact.html">Contact</a></li>
+    </ul>
+  </section>
+  <section class="header_2"> 
+       <figure>
+      <img class="Logo" src="./img/icons/red-beard.png" alt="Logo_Barbe">
+    </figure>
+    <article class="menu">
+      <button class="butmenu">|||</button>
+    <ul class="listmenu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="cervice.html">Srevice</a></li>
+      <li><a href="NosEquipes.html">Notre équipe</a></li>
+      <li><a href="Gallerie.html">Gallerie</a></li>
+      <li><a href="Shop.html">Shop</a></li>
+      <li><a href="Blog.html">Blog</a></li>
+      <li><a href="Reservation.html">Reservation</a></li>
+      <li><a href="Contact.html">Contact</a></li>
+    </ul>
+  </article>
+  </section>
+  </header>
+<main class="mainSection">
+ 
+    <h1>Contact</h1>
 
-<header>
+  <section class="block">
+    <article>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In vitae pellentesque libero.
+         Aenean quis fermentum risus, nec consectetur eros. 
+         Donec tempor, augue non commodo imperdiet, mi orci venenatis metus, vitae iaculis sem erat sit amet nulla.
+         Sed nec neque id lectus cursus ornare in ut risus. Sed maximus venenatis lectus, eu sodales neque. 
+         Quisque eget quam sit amet elit efficitur volutpat et sed tortor. Aliquam nunc tellus, tristique eu vehicula auctor, cursus nec consectetur eros.
+         Donec tempor, augue non commodo imperdiet, mi orci venenatis metus, vitae iaculis sem erat sit amet nulla.Sed nec neque id lectus cursus ornare in ut risus. 
+         Sed maximus venenatis lectus, eu sodales neque. 
+         Quisque eget quam sit amet elit efficitur volutpat et sed tortor. 
+         Aliquam nunc tellus, tristique eu vehicula auctor, cursus nec consectetur eros. 
+         Donec tempor, augue non commodo imperdiet, mi orci venenatis metus, vitae iaculis sem erat sit amet nulla.
+         Sed nec neque id lectus cursus ornare in ut risus. 
+         Sed maximus venenatis lectus, eu sodales neque. 
+         Quisque eget quam sit amet elit efficitur volutpat et sed tortor. 
+         Aliquam nunc tellus, tristique eu vehicula auctor, cursus</p>
+    </article>
+    <form class="contactbox" action="" method="post">
 
-</header>
+      <div class="formFullName">
 
-<main>
+          <label for="prenom"></label>
+          <input class="inputbox" type="text" id="prenom" name="Prénom" placeholder="Prénom" maxlength="16"
+            required>
+          <label for="nom"></label>
+          <input class="inputbox" type="text" id="nom" name="Nom" placeholder="Nom" maxlength="16"
+            required>
+            
+      </div>
 
+      <label for="email"></label>
+      <input class="inputbox" type="email" id="email" name="votre email" placeholder="Adresse e-mail" required>
+
+      <label for="Message"></label>
+      <textarea class="inputbox" class="inputbox" name="Message" id="Message" cols="30" rows="10"
+        placeholder="Votre message" required></textarea>
+
+      <div class="formButtons">
+        <label for="envoyer"></label>
+        <input type="submit" name="envoyer" id="envoyer" placeholder="Envoyer">
+        
+        <label for="reinitialiser"></label>
+        <input type="reset" id="reinitialiser" name="reinitialiser" placeholder="Réinitialiser">
+      </div>
+
+   </form>
+
+  </section>
+</form>
+
+</section>
 </main>
-
+ 
 <footer>
+  <ul>
+    <li>CONTACT:</li>
+    <li>barber_d_or@gmail.com</li>
+    <li>202 boulevard gambetta </li>
+    <li>03 45 87 56 44</li>
+  </ul>
 
+  <ul>
+    <li><img src="./img/icons/facebook.svg" alt="logo_facebook"></li>
+    <li><img src="./img/icons/insta.svg" alt="logo_facebook"></li>
+    <li><img src="./img/icons/twitter.svg" alt="logo_facebook"></li>
+  </ul>
+
+  <ul>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+  </ul>
+
+  <ul>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+  </ul>
 </footer>
 
-<!-- Add your site or application content here -->
-<p>Hello world! This is HTML5 Boilerplate.</p>
-<script src="assets/js/vendor/modernizr-3.11.2.min.js"></script>
-<script src="assets/js/plugins.js"></script>
-<script src="assets/js/main.js"></script>
 
-<!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
-<script>
-  window.ga = function () {
-    ga.q.push(arguments)
-  };
-  ga.q = [];
-  ga.l = +new Date;
-  ga('create', 'UA-XXXXX-Y', 'auto');
-  ga('set', 'anonymizeIp', true);
-  ga('set', 'transport', 'beacon');
-  ga('send', 'pageview')
-</script>
-<script async src="https://www.google-analytics.com/analytics.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Add your site or application content here -->
+  <script src="js/vendor/modernizr-3.11.2.min.js"></script>
+  <script src="js/plugins.js"></script>
+  <script src="js/main.js"></script>
+
+  <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+  <script>
+    window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
+    ga('create', 'UA-XXXXX-Y', 'auto'); ga('set', 'anonymizeIp', true); ga('set', 'transport', 'beacon'); ga('send', 'pageview')
+  </script>
+  <script src="https://www.google-analytics.com/analytics.js" async></script>
 </body>
 
 </html>
