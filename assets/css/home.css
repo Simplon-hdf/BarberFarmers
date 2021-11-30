@@ -1,0 +1,73 @@
+
+                    /* Top zone */
+.banner img{
+    width: 100%;
+    border-bottom: solid 4px #D4AF37;
+}
+
+                    /*  Text zone   */
+
+.aboutUs{ /*    Main container      */
+    display: flex;
+    flex-direction: column;
+}
+
+.aboutUs h1, p {
+    color: #fefee2;
+    text-align: center;
+}
+.aboutUs p {
+    width: 60%;
+    font-size: 2rem;
+    text-align: justify;
+    overflow: scroll;
+    height: 600px;
+    margin: auto;
+    padding: 3%;
+    background-color: rgba(184, 115, 51, 0.77) ;
+    border: 4px solid #D4AF37;
+    border-radius: 1rem;
+    overflow-wrap: break-word;
+    text-align: start;
+    margin-bottom: 15%;
+}
+
+.aboutUs h1 {
+    font-size: 6em;
+    text-shadow: black 1.5px 1.5px 1.5px;
+    font-family: "Rye";
+}
+.goldenWord { /*    Golden word in h1 Header    */
+    color: #D4AF37;
+}
+
+@media screen and (max-width: 480px){
+        .aboutUs h1 {
+            font-size: 2em;
+        }
+    
+}
+
+@media screen and (max-width: 481px){
+    .aboutUs h1 {
+        font-size: 3em;
+    }
+}
+
+
+@media screen and (max-width: 769px){
+    .aboutUs h1 {
+        font-size: 4em;
+    }
+}
+
+@media screen and (min-width: 1280px){
+
+    .aboutUs h1 {
+        font-size: 8em;
+    }
+}
+
+
+
+
