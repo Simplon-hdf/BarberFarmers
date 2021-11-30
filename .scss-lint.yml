@@ -117,7 +117,7 @@ linters:
 
   PropertySpelling:
     enabled: true
-    extra_properties: []
+    extra_properties: [ ]
 
   PropertyUnits:
     enabled: false
@@ -210,8 +210,8 @@ linters:
   VendorPrefixes:
     enabled: true
     identifier_list: base
-    include: []
-    exclude: []
+    include: [ ]
+    exclude: [ ]
 
   ZeroUnit:
     enabled: true
