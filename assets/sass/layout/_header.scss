@@ -1,3 +1,129 @@
-// -----------------------------------------------------------------------------
-// This file contains all styles related to the header of the site/application.
-// -----------------------------------------------------------------------------
+@import "../abstracts/functions";
+@import "../abstracts/variables";
+@import "../abstracts/mixins";
+
+.header_2{
+    display: none;
+}
+header {
+    background-color: $background-color;
+    min-height: 10vw;
+    max-width: 100%;
+}
+.header_1{ 
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    align-items: center;
+    
+    figure{
+        justify-self: center;
+}
+    .Logo {
+        color: $color;
+        max-width: 15vw;
+    }
+     ul {
+        max-width: 80%;
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-around;
+        
+        list-style-type: none;
+    }
+}
+
+header li,a {
+color: white;
+    padding: 1VW;
+    font-size: 2vw;
+    text-decoration: none;
+   
+    a:hover{
+
+    cursor: pointer;
+    color: darken($color: $color, $amount: 20);
+    text-decoration: $color;
+    }
+}
+@include media (375px) {
+
+::-webkit-scrollbar {
+    width: 20px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    display: none;
+    background-color: grey;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #D4AF37;
+    border: 1px solid black;
+    border-radius: 1rem;
+}
+
+::-webkit-scrollbar-corner{
+    display: none;
+}
+
+@include media(600px) {
+    header {
+        max-width: 10%;
+        background-color: $background-color;
+    }
+
+    .header_1{
+        display: none;
+    }
+    .header_2{
+        display: flex;
+        padding: 5%;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .Logo{
+        margin-left: 4vh;
+        max-width: 10vh;
+    }
+    .butmenu{
+        margin-right: 5vh;
+        background-color: $background-color;
+        color: white;
+        cursor: pointer;
+        font-size: 4rem;
+        rotate: 90deg;
+        border: none;
+    }
+    .menu{
+        position: relative;
+        display: inline-block;
+    }
+    .listmenu{
+        display: none;
+        list-style-type: none;
+        position: absolute;
+        background-color: $background-color;
+        min-width: 20vh;
+        left: -10vh;
+        z-index: 1;
+    }
+    .listmenu a{
+        padding: 5%;
+        color: white;
+        background-color:$background-color ;
+        font-size: 2rem;
+        text-decoration: none;
+        display: block;
+    }
+    .listmenu a:hover{
+        background-color:#ffd700 ;
+    }
+
+        .menu:active .listmenu{
+            display: block;
+        }
+    }
+}

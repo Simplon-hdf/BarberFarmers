@@ -31,4 +31,17 @@
     @content;
   }
 }
-
+///media queries
+@mixin media ($width){
+  @media (max-width: $width) {
+      @content;
+  }
+ }
+ /// mixin selection padding
+ @mixin position ($position, $size) {
+     padding: $size $size $size $size;
+     justify-content: $position;
+ 
+ }
+     
+ 
