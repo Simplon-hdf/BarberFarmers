@@ -1,12 +1,12 @@
-/*@import "./utils/variables";
-@import "./layouts/form";*/
-
-
-/*# sourceMappingURL=main.css.map */
+// -----------------------------------------------------------------------------
+// This file contains styles that are specific to the our-team page.
+// -----------------------------------------------------------------------------
 
 .our-team {
   display: grid;
   gap: 25px 10px;
+  background-image: url(/assets/img/wooden-background.jpg);
+  background-attachment: fixed;
 }
 
 .our-team h1 {
