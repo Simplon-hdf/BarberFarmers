@@ -1,0 +1,125 @@
+@import '../abstracts/variables';
+
+@mixin createGridCards($idOfCard) {
+    .container .card#{$idOfCard} {
+        grid-area: card#{$idOfCard}; 
+    }
+}
+
+@mixin forPhoneAndTablet($screenWidth, $ArticleWidth) {
+
+
+    /*          Media queries for tablets and large smartphones         */  
+    @media (min-width: $screenWidth) { @content; 
+        .container {
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 0.5fr 1fr 1fr 1fr 1fr 0.15fr;
+            grid-template-areas: 
+            "title title"
+            "card1 card2"
+            "card3 card4"
+            "card5 card6"
+            "card7 card8"
+            ;
+        }
+        article{
+            width: $ArticleWidth;
+        }
+    }
+}
+
+.container { /*     Main Section      */
+    display: grid;
+    gap: 25px 10px;
+    margin-top: 10%;
+
+    h1{
+        grid-area: title;
+        color: $title-color;
+        text-align: center;
+        font-size: $fontSizeTitle;
+        text-shadow: $shadow;
+        font-family: $fontFamilyTitle;
+    }
+
+    article { /*    Cards       */
+        justify-self: center;
+        border-radius: 15px;
+        background-color: $backgroundSecondaryColor;
+        border: $borderDesign;
+        display: grid;
+        grid-template-rows: 1fr 0.15fr;
+    }
+
+    /*    Set Grid Area       */
+    @for $i from 1 through 8{ 
+        @include createGridCards($i);
+    }
+
+    article>figure{
+        width: 80%;
+        margin: auto;
+        
+    }
+    article>figure>img {
+        width: 100%;
+    }
+    .foto {
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    }
+    
+    article>p, article>a {
+        text-align: center;
+        padding: 1rem;
+        font-size: 1.3rem;
+        text-align: justify;
+        color: $text-color;
+    }
+}
+
+/*          For smallest screens            */
+@media screen and (max-width: 480px){
+    .container {
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.5fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 0.15fr;
+        grid-template-areas: 
+        "title"
+        "card1"
+        "card2"
+        "card3"
+        "card4"
+        "card5"
+        "card6"
+        "card7"
+        "card8"
+        ;
+    }
+    article{
+        width: 200px;
+    }
+}
+
+/*          For tablets and large smartphones screens          */
+@include forPhoneAndTablet(481px, 250px);
+
+/*          For tablets         */
+@include forPhoneAndTablet(769px, 300px);
+
+/*          For larger screens             */
+@media screen and (min-width: 1280px){
+    .container {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 0.5fr 1fr 1fr 1fr 0.15fr;
+        grid-template-areas: 
+        ". title ."
+        "card1 card2 card3"
+        "card4 card5 card6"
+        "card7 card8 ."
+        ;
+    }
+    article {
+        width: 400px;
+    }
+    
+}
